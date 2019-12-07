@@ -1,10 +1,14 @@
 import React from 'react';
 import './App.css';
-import Jumbotron from "./components/jumbotron"
+import Page from "./components/page"
 
 function App() {
   return (
-    <Jumbotron></Jumbotron>
+    <div>
+    <h1>Hello</h1>
+    <Page></Page>
+    </div>    
+
   );
 }
 

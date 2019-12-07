@@ -6,19 +6,26 @@ class Page extends Component {
         items: [] 
     }
     componentDidMount(){
-        axios.get("http://localhost:3000/uniqlo")
+        axios.get("http://localhost:8080/uniqlo/")
         .then( res => {
-            this.setState({items:res})
+            this.setState({items:res.data})
         })
+        .catch(err => console.log(err));
     }
     render(){
+        console.log(this.state.items)
         return (
-            this.state.items.map((item, i)=> {
+            this.state.items.length ? 
+            <div>
+            {this.state.items.map((item, i)=> {
                 return (
-                <h5>{item.name}</h5>
+                <h5>Hi{item.name}</h5>
                 )
             }
-            )
+            )}
+            </div>
+            :
+            <div></div>
         )
     }
 
