@@ -1,0 +1,19 @@
+.jumbo {
+    min-height: 50vh;
+    background-color: white
+}
+
+#home-title {
+    font-weight: 900;
+    color: red;
+    font-size: 15em;
+
+}
+
+
+#home-title:hover {
+    -webkit-transform: rotateY(360deg);
+	-ms-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+}
+
