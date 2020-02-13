@@ -11,7 +11,7 @@ function ProductCard(props) {
                             <img className="img" src={props.image} alt="" />
                             <div className="img-info">
                                 <div className="info-inner">
-                                    <span className="p-name">uniqlo</span>
+                                    <span className="p-name">{props.brand}</span>
                                     <span className="p-company"></span>
                                 </div>
                                 <div className="a-size"><span className="size">{props.name}</span></div>

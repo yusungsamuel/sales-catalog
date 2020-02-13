@@ -28,6 +28,7 @@ class Page extends Component {
                     image = {item.image}
                     regprice = {item.regprice}
                     sale = {item.salesprice}
+                    brand = {item.brand}
                 />
                 )
             }
