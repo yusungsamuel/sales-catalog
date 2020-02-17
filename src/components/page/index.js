@@ -7,7 +7,7 @@ import {SideForm, Input} from "../sideForm"
 
 class Page extends Component {
     state = {
-        brands: [],
+        brands: [...brands],
         items: []
     }
     componentDidMount() {
@@ -18,13 +18,15 @@ class Page extends Component {
             .catch(err => console.log(err));
     }
 
-    handleBrandOption = (event) => {
-        event.preventDefault();
-        event.target.checked = !event.target.checked
+    handleBrandOption = (option) => {
+        let update = [...this.state.brands]
+        update[option]["checked"] = ! update[option]["checked"]
+        this.setState({brands: update})
+        
     }
 
     render() {
-        console.log(this.state.items)
+        console.log(this.state.brands)
         return (
 
             <div className="row">

@@ -1,13 +1,21 @@
 import React, { Component } from "react"
 import "./style.scss"
 
-export function SideForm(props) {
-    return (
-        <form className="form" >
-            {props.children}
-        </form>
-    )
-
+export class SideForm extends Component {
+    
+    
+    // handleChange = (event) => {
+    //     console.log(this.props.children[0])
+    // }
+    
+    
+    render() {
+        return (
+            <form className="form">
+                {this.props.children}
+            </form>
+        )
+    }
 }
 
 
@@ -19,7 +27,7 @@ export class Input extends Component {
     handleChange = (event) => {
 
         this.setState({ checked: !this.state.checked })
-        console.log(event.target.checked)
+        this.props.handleBrandClick(this.props.num)
     }
 
     render() {
