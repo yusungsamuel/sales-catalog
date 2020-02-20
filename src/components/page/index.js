@@ -10,8 +10,21 @@ class Page extends Component {
         brands: [...brands],
         items: []
     }
-    componentDidMount() {
-        axios.get("https://enigmatic-tundra-66827.herokuapp.com/api/uniqlo")
+    async componentDidMount() {
+        // let items = []
+        // let promise = []
+        // this.state.brands.forEach((brand)=>{
+        //     if(brand.checked){
+        //         promise.push(axios.get("https://enigmatic-tundra-66827.herokuapp.com/api/" + brand.name))
+        //     }
+        // })
+        // let resources = await Promise.all(promise)
+        // resources.forEach((resource)=>{
+        //     items.push(resource.data)
+        // })
+        // this.setState({items:items})
+        
+        axios.get("https://enigmatic-tundra-66827.herokuapp.com/api/" + this.state.brands[1]["name"])
             .then(res => {
                 this.setState({ items: res.data })
             })

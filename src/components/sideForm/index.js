@@ -21,7 +21,7 @@ export class SideForm extends Component {
 
 export class Input extends Component {
     state = {
-        checked: false
+        checked: true
     }
 
     handleChange = (event) => {
