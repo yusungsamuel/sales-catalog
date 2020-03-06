@@ -1,10 +1,14 @@
 [
     {
-        "name": "UNIQLO",
-        "checked" :false
+        "name" : "H&M",
+        "checked" : false
     },
     {
-        "name": "ZARA",
-        "checked": false
+        "name": "TOPMAN",
+        "checked" : false
+    },
+    {
+        "name": "UNIQLO",
+        "checked" : false
     }
 ]
