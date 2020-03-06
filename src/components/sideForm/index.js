@@ -33,7 +33,7 @@ export class Input extends Component {
     render() {
         return (
             <div className="inputGroup">
-                <input id={"option" + this.props.num} name={"option" + this.props.num} type="checkbox" checked={this.state.checked} onChange={this.handleChange} />
+                <input id={"option" + this.props.num} name={"option" + this.props.num} type="checkbox" checked={this.state.checked} onChange={this.handleChange}/>
                 <label for={"option" + this.props.num}>{this.props.name}</label>
             </div>
         )

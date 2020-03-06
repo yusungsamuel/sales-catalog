@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import axios from "axios"
+import Jumbotron from "../jumbotron"
 import ProductCard from "../productCard"
 import "./style.css"
 import brands from "../../brands.json"
@@ -32,62 +33,63 @@ class Page extends Component {
     }
 
     render() {
-        let brands =this.state.brands
+        let brands = this.state.brands
         return (
+            <div>
 
-            <div className="row">
-                <div className="col-3">
-                    <SideForm>
-                        {
-                            this.state.brands.map((brand, i) => {
-                                return (
-                                    <Input
-                                        name={brand.name}
-                                        key={i}
-                                        num={i}
-                                        check={brand.checked}
-                                        handleBrandClick={this.handleBrandOption}
-                                    />
-                                )
-                            })
-                        }
-                    </SideForm>
-                </div>
-                <div className="col-9 center product-display">
-                    {
-
-                        this.state.items.map((list, i)=>{
-                            if(brands[i].checked){
-                                return (
-                                    list.map((item, j)=>{
-                                        return (
-                                            <ProductCard
-                                                name={item.name}
-                                                link={item.link}
-                                                image={item.image}
-                                                regprice={item.regprice}
-                                                sale={item.salesprice}
-                                                brand={item.brand}
-                                                key={j}
-                                            />
-                                        )
-                                    })
-                                )
+                {/* <Jumbotron></Jumbotron> */}
+                <div className="row">
+                    <div className="col-2">
+                        <SideForm>
+                            {
+                                this.state.brands.map((brand, i) => {
+                                    return (
+                                        <Input
+                                            name={brand.name}
+                                            key={i}
+                                            num={i}
+                                            check={brand.checked}
+                                            handleBrandClick={this.handleBrandOption}
+                                        />
+                                    )
+                                })
                             }
-                        })
 
-                        
+                        </SideForm>
+                    </div>
+                    <div className="col-10 center product-display">
+                        {
 
-                        
+                            this.state.items.map((list, i) => {
+                                if (brands[i].checked) {
+                                    return (
+                                        list.map((item, j) => {
+                                            return (
+                                                <ProductCard
+                                                    name={item.name}
+                                                    link={item.link}
+                                                    image={item.image}
+                                                    regprice={item.regprice}
+                                                    sale={item.salesprice}
+                                                    brand={item.brand}
+                                                    key={j}
+                                                />
+                                            )
+                                        })
+                                    )
+                                }
+                            })
 
 
-                    }
+
+
+
+
+                        }
+                    </div>
                 </div>
+
             </div>
-
-
-
-
         )
     }
 

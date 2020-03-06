@@ -3,11 +3,10 @@ import "./style.css"
 
 function Jumbotron() {
     return (
-        <div className="jumbotron jumbotron-fluid jumbo">
-            <div className="container">
-                <h1 className="animated flipInX" id="home-title">Sales Catalog</h1>
-                {/* <p class="lead">An one-stop-shop for shopping sales items from your favorite brand</p> */}
-            </div>
+        <div className="container text-center landing align-middle">
+            <header className="jumbo-title mt-5">SALES CATALOG</header>
+            <p className="description">Browse on sale items from your favorite brands</p>
+            <a className="btn btn-dark" href="/browse" role="button"><span className="btn-text">GET STARTED</span></a>
         </div>
     )
 }
