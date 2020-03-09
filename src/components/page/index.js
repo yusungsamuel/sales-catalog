@@ -1,98 +1,96 @@
-import React, { Component } from "react"
+import React, { useState, useEffect } from "react"
 import axios from "axios"
 import Jumbotron from "../jumbotron"
 import ProductCard from "../productCard"
 import "./style.css"
-import brands from "../../brands.json"
+import brandsJson from "../../brands.json"
 import { SideForm, Input } from "../sideForm"
 
-class Page extends Component {
-    state = {
-        brands: [...brands],
-        items: []
-    }
-    async componentDidMount() {
-        let items = []
+function Page() {
+    const [brands, setBrands] = useState([...brandsJson])
+    const [items, setItems] = useState([])
+
+    useEffect(async () => {
+        let updatedItems = []
         let promise = []
-        this.state.brands.forEach((brand) => {
-            promise.push(axios.get("https://enigmatic-tundra-66827.herokuapp.com/api/" + brand.name))
+        let cancel 
+        brands.forEach((brand) => {
+            // promise.push(axios.get("https://enigmatic-tundra-66827.herokuapp.com/api/" + brand.name))
+            promise.push(axios({
+                method: 'GET',
+                url: ("https://enigmatic-tundra-66827.herokuapp.com/api/" + brand.name),
+                cancelToken: new axios.CancelToken(c => cancel = c)
+            }))
         })
         let resources = await Promise.all(promise)
         resources.forEach((resource) => {
-            items.push(resource.data)
+            updatedItems.push(resource.data)
         })
         // items = items.flat(1)
-        this.setState({ items: items })
-    }
+        setItems(updatedItems)
+        return () => cancel()
+    },[]);
 
-    handleBrandOption = (option) => {
-        let update = [...this.state.brands]
+    
+    let handleBrandOption = (option) => {
+        let update = [...brands]
         update[option]["checked"] = !update[option]["checked"]
-        this.setState({ brands: update })
-
+        setBrands(update)
     }
 
-    render() {
-        let brands = this.state.brands
-        return (
-            <div>
 
-                {/* <Jumbotron></Jumbotron> */}
-                <div className="row">
-                    <div className="col-2">
-                        <SideForm>
-                            {
-                                this.state.brands.map((brand, i) => {
-                                    return (
-                                        <Input
-                                            name={brand.name}
-                                            key={i}
-                                            num={i}
-                                            check={brand.checked}
-                                            handleBrandClick={this.handleBrandOption}
-                                        />
-                                    )
-                                })
-                            }
+    return (
+        <div>
 
-                        </SideForm>
-                    </div>
-                    <div className="col-10 center product-display">
+            {/* <Jumbotron></Jumbotron> */}
+            <div className="row">
+                <div className="col-2">
+                    <SideForm>
                         {
-
-                            this.state.items.map((list, i) => {
-                                if (brands[i].checked) {
-                                    return (
-                                        list.map((item, j) => {
-                                            return (
-                                                <ProductCard
-                                                    name={item.name}
-                                                    link={item.link}
-                                                    image={item.image}
-                                                    regprice={item.regprice}
-                                                    sale={item.salesprice}
-                                                    brand={item.brand}
-                                                    key={j}
-                                                />
-                                            )
-                                        })
-                                    )
-                                }
+                            brands.map((brand, i) => {
+                                return (
+                                    <Input
+                                        name={brand.name}
+                                        key={i}
+                                        num={i}
+                                        check={brand.checked}
+                                        handleBrandClick={handleBrandOption}
+                                    />
+                                )
                             })
-
-
-
-
-
-
                         }
-                    </div>
+
+                    </SideForm>
                 </div>
+                <div className="col-10 center product-display">
+                    {
+                        items.map((list, i) => {
+                            if (brands[i].checked) {
+                                return (
+                                    list.map((item, j) => {
+                                        return (
+                                            <ProductCard
+                                                name={item.name}
+                                                link={item.link}
+                                                image={item.image}
+                                                regprice={item.regprice}
+                                                sale={item.salesprice}
+                                                brand={item.brand}
+                                                key={j}
+                                            />
+                                        )
+                                    })
+                                )
+                            }
+                        })
 
+                    }
+                </div>
             </div>
-        )
-    }
 
+        </div>
+    )
 }
+
 
 export default Page;
