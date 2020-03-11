@@ -3,7 +3,7 @@ import "./style.css"
 
 function ProductCard(props) {
     return (
-        <div className="page-wrapper">
+        <div className="page-wrapper animated fadeIn slow">
             <div className="page-inner">
                 <div className="row">
                     <div className="el-wrapper">

@@ -64,16 +64,13 @@ function Page() {
                     </SideForm>
                 </div>
                 <div className="col-10 center product-display">
-                    {
-                        items.map((list, i) => {
-                            let hidden = !brands[i].checked
-                            if (brands[i].checked) {
-                                return (
+                        {
+                            items.map((list, i) => {
+                                if (brands[i].checked) {
+                                    return (
 
-                                    list.map((item, j) => {
-                                        return (
-                                            <SmoothRender hidden={hidden} timing={750}>
-
+                                        list.map((item, j) => {
+                                            return (
                                                 <ProductCard
                                                     name={item.name}
                                                     link={item.link}
@@ -83,16 +80,17 @@ function Page() {
                                                     brand={item.brand}
                                                     key={j}
                                                 />
-                                            </SmoothRender>
 
-                                        )
-                                    })
+                                            )
+                                        })
 
-                                )
-                            }
-                        })
 
-                    }
+                                    )
+                                }
+                            })
+
+                        }
+
                 </div>
             </div>
 
