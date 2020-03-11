@@ -20,3 +20,7 @@
 .App-link {
   color: #09d3ac;
 }
+
+.all-page {
+  min-height: 100vh
+}

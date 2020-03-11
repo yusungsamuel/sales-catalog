@@ -5,6 +5,8 @@ import ProductCard from "../productCard"
 import "./style.css"
 import brandsJson from "../../brands.json"
 import { SideForm, Input } from "../sideForm"
+import SmoothRender from 'react-smooth-render';
+
 
 function Page() {
     const [brands, setBrands] = useState([...brandsJson])
@@ -13,7 +15,7 @@ function Page() {
     useEffect(async () => {
         let updatedItems = []
         let promise = []
-        let cancel 
+        let cancel
         brands.forEach((brand) => {
             // promise.push(axios.get("https://enigmatic-tundra-66827.herokuapp.com/api/" + brand.name))
             promise.push(axios({
@@ -29,18 +31,17 @@ function Page() {
         // items = items.flat(1)
         setItems(updatedItems)
         return () => cancel()
-    },[]);
+    }, []);
 
-    
+
     let handleBrandOption = (option) => {
         let update = [...brands]
         update[option]["checked"] = !update[option]["checked"]
         setBrands(update)
     }
 
-
     return (
-        <div>
+        <div className="display-page">
 
             {/* <Jumbotron></Jumbotron> */}
             <div className="row">
@@ -65,21 +66,28 @@ function Page() {
                 <div className="col-10 center product-display">
                     {
                         items.map((list, i) => {
+                            let hidden = !brands[i].checked
                             if (brands[i].checked) {
                                 return (
+
                                     list.map((item, j) => {
                                         return (
-                                            <ProductCard
-                                                name={item.name}
-                                                link={item.link}
-                                                image={item.image}
-                                                regprice={item.regprice}
-                                                sale={item.salesprice}
-                                                brand={item.brand}
-                                                key={j}
-                                            />
+                                            <SmoothRender hidden={hidden} timing={750}>
+
+                                                <ProductCard
+                                                    name={item.name}
+                                                    link={item.link}
+                                                    image={item.image}
+                                                    regprice={item.regprice}
+                                                    sale={item.salesprice}
+                                                    brand={item.brand}
+                                                    key={j}
+                                                />
+                                            </SmoothRender>
+
                                         )
                                     })
+
                                 )
                             }
                         })

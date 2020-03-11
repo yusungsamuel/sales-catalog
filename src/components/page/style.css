@@ -1,3 +1,7 @@
+.display-page{
+    min-height:85vh
+}
+
 .product-display {
     display:flex;
     flex-wrap: wrap;

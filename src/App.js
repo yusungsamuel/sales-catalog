@@ -4,29 +4,41 @@ import Page from "./components/page"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Redirect } from 'react-router'
 import Jumbotron from './components/jumbotron';
-
-
-
+import Nav from "./components/nav"
+import About from "./components/about"
 function App() {
   return (
+    <div className="all-page">
+      <Router>
 
-
-    <Router>
-      <div>
         <Switch>
           <Route exact path="/" render={() => {
             return (
-              <Jumbotron />
+              <>
+                <Nav></Nav>
+                <Jumbotron />
+              </>
             )
           }} />
+
           <Route exact path="/browse" render={() => {
-            return (<Page></Page>)
+            return (
+
+              <>
+                <Nav></Nav>
+                <Page></Page>
+              </>
+            )
+
+          }} />
+
+          <Route exact path="/about" render={() => {
+            return (<About></About>)
 
           }} />
         </Switch>
-      </div>
-    </Router>
-
+      </Router>
+    </div>
   );
 }
 
