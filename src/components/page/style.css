@@ -1,9 +1,13 @@
 .display-page{
-    min-height:85vh
+    min-height:85vh;
+    overflow-y: auto;
 }
 
 .product-display {
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-height:85vh;
+    overflow-y: auto;
+
 }

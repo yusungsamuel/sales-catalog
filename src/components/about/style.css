@@ -2,13 +2,34 @@
     height:100vh
 }
 
-.gif {
-    background-image:url("https://images.unsplash.com/photo-1583928374076-e8ae697e298c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+.about-left {
+    background-image:url("https://p68.f3.n0.cdn.getcloudapp.com/items/qGuor17w/Screen+Recording+2020-03-11+at+04.02.47.61+PM.gif?v=d28c82e15180a23daa9e8de1c2feaaf9");
     background-position: center;
     background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
     -o-background-size: cover;
     background-attachment: fixed; 
-    background-size: cover;
+    background-size: contain;
+}
+
+.description {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    justify-items: center;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    font-family: 'Playfair Display', serif;
+}
+
+.about-right {
+    background-color: black;
+
+}
+
+header {
+    font-size: 5vw
 }
