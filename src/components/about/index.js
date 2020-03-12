@@ -7,6 +7,7 @@ function About() {
             <div className="row about">
                 <div className="col-6 about-left"></div>
                 <div className="about-right col-6">
+                    <a href="/"><i class="fas fa-times fa-3x"></i></a>
                     <div className="description mx-5">
                     <header>Sales Calatalog</header>
                     <p>Save Time! Save Money! Sales catalog is an one-stop "shop" for your to browse on sale items from your favorite brands. We collect re-time on sale item information from these fashion brands and display it all on one page.</p>

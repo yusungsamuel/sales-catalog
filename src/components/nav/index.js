@@ -3,7 +3,7 @@ import "./style.css"
 
 function Nav() {
     return (
-        <ul className="nav nav-bar mb-5 sticky-top">
+        <ul className="nav nav-bar sticky-top">
             <li className="nav-item">
                 <a className="nav-link name" href="/">SALES CATALOG</a>
             </li>

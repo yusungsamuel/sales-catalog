@@ -41,7 +41,7 @@ function Page() {
     }
 
     return (
-        <div className="display-page">
+        <div className="display-page mt-5">
 
             {/* <Jumbotron></Jumbotron> */}
             <div className="row">

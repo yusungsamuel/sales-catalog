@@ -1,0 +1,11 @@
+.uk-offcanvas-bar {
+    background-color: black;
+}
+
+.side-list {
+    justify-content: center;
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    height:80vh
+}

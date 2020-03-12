@@ -33,3 +33,10 @@
 header {
     font-size: 5vw
 }
+
+i.fa-times {
+    color:rgba(255, 255, 255, 0.651);
+    position: absolute;
+    right: 5%;
+    top: 5%;
+}
