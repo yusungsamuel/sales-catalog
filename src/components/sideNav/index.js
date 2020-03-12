@@ -5,7 +5,7 @@ function SideNav() {
 
     return (
 
-        <div id="offcanvas-usage" data-uk-offcanvas="">
+        <div id="offcanvas-usage" data-uk-offcanvas>
             <div class="uk-offcanvas-bar">
 
                 <button class="uk-offcanvas-close" type="button" data-uk-close></button>
