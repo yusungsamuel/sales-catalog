@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Page from "./components/page"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Redirect } from 'react-router'
 import Jumbotron from './components/jumbotron';
 import Nav from "./components/nav"
 import SideNav from "./components/sideNav"
