@@ -3,7 +3,7 @@ Sales Catalog is an one-stop "shop for users to browse on sale items from their 
 
 ## **DEMO**
 -----
-![DEMO](https://p68.f3.n0.cdn.getcloudapp.com/items/jkuKm8pY/Screen+Recording+2020-03-12+at+10.27.03.51+AM.gif?v=3a685a639b59262202788517684d8eb0 "Demo")
+![DEMO](https://p68.f3.n0.cdn.getcloudapp.com/items/v1urLB7m/Image+2020-03-12+at+10.29.26+AM.png?v=a7d4b64909399389978f85f75edea7a1 "Demo")
 
 
 ## **Motivation**
