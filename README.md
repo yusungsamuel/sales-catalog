@@ -2,20 +2,16 @@
 Sales Catalog is an one-stop "shop for users to browse on sale items from their favorite brand. It uses an API that scrape on sale items' information from the brand's official website. 
 
 ## **DEMO**
------
 ![DEMO](https://p68.f3.n0.cdn.getcloudapp.com/items/v1urLB7m/Image+2020-03-12+at+10.29.26+AM.png?v=a7d4b64909399389978f85f75edea7a1 "Demo")
 
 
 ## **Motivation**
-------
 When you are online shopping, do you find yourselves going to the sales section immediately and you don't ever buy regular price items? I find myself doing that and I believed many other people do that too. Therefore, I thought it would be convenient if there is a website that only display on sale items
 
 ## **Getting Started**
------
 To use this application, simply go to the deployed site or click [HERE](https://sales-catalog.herokuapp.com/). You can toggle on and off for different brands. The on sale items from the selected brands will be displayed on the same page.
 
 ## **Getting a Copy**
------
 To get a copy of this project and run it on your local machine, follow the instruction below. 
 
 ### **Prerequisites** 📌
@@ -43,7 +39,6 @@ This repository is only the front-end of Sales Catalog. The on sale items inform
 
 
 ## **Technologies Used**
------
  - HTML5 
  - CSS
  - [Bootstrap](https://getbootstrap.com/) - CSS Framework 
@@ -60,5 +55,4 @@ This repository is only the front-end of Sales Catalog. The on sale items inform
 
 
  ## **Author**
- ----
  Samuel Yu - https://github.com/yusungsamuel
