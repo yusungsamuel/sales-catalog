@@ -1,69 +1,64 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# **Sales Catalog**
+Sales Catalog is an one-stop "shop for users to browse on sale items from their favorite brand. It uses an API that scrape on sale items' information from the brand's official website. 
 
-## Available Scripts
+## **DEMO**
+-----
+![DEMO](https://p68.f3.n0.cdn.getcloudapp.com/items/BluBdWAX/Screen+Recording+2020-03-12+at+08.56.34.33+AM.gif?v=c675125ef289fc91ac3f712553d464a7 "Demo")
 
-In the project directory, you can run:
 
-### `npm start`
+## **Motivation**
+------
+When you are online shopping, do you find yourselves going to the sales section immediately and you don't ever buy regular price items? I find myself doing that and I believed many other people do that too. Therefore, I thought it would be convenient if there is a website that only display on sale items
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## **Getting Started**
+-----
+To use this application, simply go to the deployed site or click [HERE](https://sales-catalog.herokuapp.com/). You can toggle on and off for different brands. The on sale items from the selected brands will be displayed on the same page.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## **Getting a Copy**
+-----
+To get a copy of this project and run it on your local machine, follow the instruction below. 
 
-### `npm test`
+### **Prerequisites** 📌
+- NPM- comes with [Node](https://nodejs.org/en/)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### **Step by step**
+1. clone this repository to your local machine
 
-### `npm run build`
+    ```git clone https://github.com/yusungsamuel/sales-catalog.git```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Navigate to the project folder and run npm i to install the necessary dependencies
+    
+    ``` npm i```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+3. run npm start to see the application launch on ***http://localhost:3000***
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```npm run```
 
-### `npm run eject`
+### **Customization**
+This repository is only the front-end of Sales Catalog. The on sale items information are drawn from the [API](http://enigmatic-tundra-66827.herokuapp.com/api/uniqlo).To display information that the current version does not have, you may make request to different API (or build your own) and obtain the neccesary information. Sales Catalog is a decoupled application so it allows the flexiblity to use different front-end and back-end. The changes will need to be made to the useEffect function located in Page component.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![code](https://p68.f3.n0.cdn.getcloudapp.com/items/mXuqJvm9/Image+2020-03-12+at+9.58.33+AM.png?v=1b4bdd44688ac3064c040a0af912782c
+ "API request code")
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## **Technologies Used**
+-----
+ - HTML5 
+ - CSS
+ - [Bootstrap](https://getbootstrap.com/) - CSS Framework 
+ - [Javascript](https://www.javascript.com/) - the primary scripting logic powering the application
+ - [React.js](https://reactjs.org/) - user interface library 
+ - [Animate.css](https://daneden.github.io/animate.css/) - CSS + Javascript library for animation
+ - [UIKit](https://getuikit.com/) - CSS Framework for additional styling
+ - [FontAwesome](https://fontawesome.com/) - Vector Icon library
+ 
+ ### **NPM Packages**
+ - [Axios](https://www.npmjs.com/package/axios)- Promise based HTTP client
+ - [node-sass](https://www.npmjs.com/package/node-sass)- library that provides binding for Node.js to LibSass
+ - [React-router-dom](https://www.npmjs.com/package/react-router-dom) - Routing library for React with DOM bindings
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# sales-catalog
+ ## **Author**
+ ----
+ Samuel Yu - https://github.com/yusungsamuel

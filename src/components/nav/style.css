@@ -1,6 +1,5 @@
 .nav-bar {
     background-color: black;
-    height:7vh;
 }
 
 .name {
@@ -12,7 +11,7 @@
 
 .sub-link {
     color: rgb(255, 255, 255);
-    /* font-size: 2vh; */
+    font-size: 2vh;
     font-weight: 900;
     font-family: 'Playfair Display', serif;
 }

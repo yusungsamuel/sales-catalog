@@ -5,7 +5,6 @@ import ProductCard from "../productCard"
 import "./style.css"
 import brandsJson from "../../brands.json"
 import { SideForm, Input } from "../sideForm"
-import SmoothRender from 'react-smooth-render';
 
 
 function Page() {
@@ -17,7 +16,6 @@ function Page() {
         let promise = []
         let cancel
         brands.forEach((brand) => {
-            // promise.push(axios.get("https://enigmatic-tundra-66827.herokuapp.com/api/" + brand.name))
             promise.push(axios({
                 method: 'GET',
                 url: ("https://enigmatic-tundra-66827.herokuapp.com/api/" + brand.name),
