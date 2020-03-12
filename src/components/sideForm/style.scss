@@ -6,7 +6,7 @@
     position: relative;
 
     label {
-      padding: 12px 30px;
+      padding: 1vh 1vw;
       width:100%;
       display: block;
       text-align: left;
@@ -43,7 +43,7 @@
         border-radius: 50%;
         z-index: 2;
         position: absolute;
-        right: 30px;
+        right: 20%;
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
@@ -66,13 +66,13 @@
     }
 
     input {
-      width: 32px;
-      height: 32px;
+      width: 3vw;
+      height: 3vw;
       order: 1;
       z-index: 2;
       position: absolute;
-      right: 30px;
-      top: 50%;
+      // left: 10vw;
+      // top: 50%;
       transform: translateY(-50%);
       cursor: pointer;
       visibility: hidden;
@@ -81,12 +81,11 @@
 
 
 .form {
-  padding: 0 16px;
-  max-width: 550px;
-  margin: 50px auto;
+  max-width: 15vw;
+  margin: auto;
   font-size: 1.2vw;
   font-weight: 600;
-  line-height: 36px;
+  line-height: 3vh;
 }
 
 
